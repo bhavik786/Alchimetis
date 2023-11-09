@@ -28,6 +28,10 @@ const Routes = [
     path: "/reports",
     component: lazy(() => import("../../views/Pages/Reports")),
   },
+  {
+    path: "/advanceReports",
+    component: lazy(() => import("../../views/Pages/AdvanceReports")),
+  },
 
   {
     path: "/second-page",

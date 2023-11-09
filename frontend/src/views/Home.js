@@ -13,6 +13,10 @@ import {
 
 import { ThemeColors } from "@src/utility/context/ThemeColors";
 import ChartjsBarChart from "./Charts/Barchart";
+import SimpleLineChart from "./Charts/NewLine";
+import HomePagePieChart from "./Charts/HomePagePieChart";
+import HomePageBarChart from "./Charts/HomaPageBarChart";
+import HomePageBar2Chart from "./Charts/HomePageBar2Chart";
 
 const Home = () => {
   return (
@@ -49,38 +53,26 @@ const Home = () => {
       <Row className="match-height" style={{ marginTop: "20px" }}>
         <Col xl="4" md="6" xs="12">
           <Card>
-            <CardHeader>Revenue</CardHeader>
+            <CardHeader></CardHeader>
             <Col xl="12" sm="12">
-              <ChartjsBarChart
-                success={"#28dac6"}
-                labelColor={"#6e6b7b"}
-                gridLineColor={"rgba(200, 200, 200, 0.2)"}
-              />
+              <HomePageBar2Chart />
             </Col>
           </Card>
         </Col>
 
         <Col xl="4" md="6" xs="12">
           <Card>
-            <CardHeader>Revenue</CardHeader>
+            <CardHeader></CardHeader>
             <Col xl="12" sm="12">
-              <ChartjsBarChart
-                success={"#28dac6"}
-                labelColor={"#6e6b7b"}
-                gridLineColor={"rgba(200, 200, 200, 0.2)"}
-              />
+              <HomePageBarChart direction={"ltr"} />
             </Col>
           </Card>
         </Col>
         <Col xl="4" md="6" xs="12">
           <Card>
-            <CardHeader>Revenue</CardHeader>
+            <CardHeader></CardHeader>
             <Col xl="12" sm="12">
-              <ChartjsBarChart
-                success={"#28dac6"}
-                labelColor={"#6e6b7b"}
-                gridLineColor={"rgba(200, 200, 200, 0.2)"}
-              />
+              <HomePagePieChart />
             </Col>
           </Card>
         </Col>

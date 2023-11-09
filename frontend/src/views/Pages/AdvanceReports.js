@@ -27,12 +27,8 @@ import Select from "react-select";
 
 import ApexLineChart from "../Charts/LineChart";
 import LineChart from "../Charts/NewLine";
-import PieChart from "../Charts/SimpleReports/PieChart";
-import { Zoom, toast } from "react-toastify";
-import { SuccessToast, SuccessToastChart } from "../../Toast";
-import SimpleBarChart from "../Charts/SimpleReports/BarChart";
-import SimpleLineChart from "../Charts/NewLine";
-const ReportPage = () => {
+import PieChart from "../Charts/PieChart";
+const AdvanceReportPage = () => {
   const { readString } = usePapaParse();
   const { colors } = useContext(ThemeColors);
   const labelColor = "#6e6b7b";
@@ -60,7 +56,6 @@ const ReportPage = () => {
     csvParsedData: [],
     selectedChartFieldsOptions: [],
     maxNumberBasedOnChart: 0,
-    showChart: false,
   });
 
   function file1() {
@@ -125,13 +120,24 @@ const ReportPage = () => {
   const handleFileUpload = (e) => {
     setState({ ...state, uploadedFile: e.target.files[0] });
     readString(e.target.files[0], {
+      // worker: true,
       download: true,
       header: true,
-
+      // config: {
+      //   delimiter: ",",
+      // },
       complete: (results) => {
         setState({ ...state, csvParsedData: results && results.data });
       },
     });
+  };
+
+  const donut = {
+    series1: "#ffe700",
+    series2: "#00d4bd",
+    series3: "#826bf8",
+    series4: "#2b9bf4",
+    series5: "#FFA1A1",
   };
 
   const handleChartChange = (e) => {
@@ -146,18 +152,6 @@ const ReportPage = () => {
     }
   };
 
-  const handleSubmit = () => {
-    setState({ ...state, showChart: true });
-    return toast.success(
-      <SuccessToastChart message={"Charts generated Successfully !"} />,
-      {
-        icon: false,
-        hideProgressBar: true,
-        transition: Zoom,
-      }
-    );
-  };
-
   return (
     <div>
       <Card>
@@ -170,39 +164,46 @@ const ReportPage = () => {
               <Label>Upload Csv Data</Label>
               <Input type="file" accept=".csv" onChange={handleFileUpload} />
             </Col>
+            <Col xxl={6} xl={6} xs={4}>
+              <Label>Select Chart Type</Label>
+              <Select options={chartTypeOptions} onChange={handleChartChange} />
+            </Col>
+            <Col xxl={6} xl={6} xs={6}>
+              <Label>Select Fields</Label>
+              <Select
+                options={state.chartFieldsOptions}
+                isMulti
+                onChange={(options) => {
+                  setState({ ...state, selectedChartFieldsOptions: options });
+                }}
+                isOptionDisabled={() =>
+                  state.selectedChartFieldsOptions.length >=
+                  state.maxNumberBasedOnChart
+                }
+              />
+            </Col>
           </Row>
           <Row style={{ marginTop: "20px" }}>
             <Col xxl={6} xl={6} xs={4}>
-              <Button color="primary" onClick={handleSubmit}>
-                Submit
-              </Button>
+              <Button color="primary">Submit</Button>
             </Col>
           </Row>
-          {state.csvParsedData &&
-          state.csvParsedData.length > 0 &&
-          state.showChart ? (
-            <>
-              {" "}
-              <Row style={{ marginTop: "20px" }}>
-                <Col xxl={6} xl={6} xs={4}>
-                  <PieChart data={state.csvParsedData} />
-                </Col>{" "}
-                <Col xxl={6} xl={6} xs={4}>
-                  {/* <SimpleBarChart /> */}
-                  <SimpleBarChart data={state.csvParsedData} />
-                </Col>
-              </Row>
-            </>
-          ) : (
-            <></>
-          )}{" "}
+
+          <Row style={{ marginTop: "20px" }}>
+            <Col xxl={6} xl={6} xs={4}>
+              <PieChart
+                data={state.csvParsedData}
+                selectedFieldForChart={state.selectedChartFieldsOptions}
+              />
+            </Col>
+          </Row>
         </CardBody>
       </Card>
     </div>
   );
 };
 
-export default ReportPage;
+export default AdvanceReportPage;
 
 // return state.activityByGroupData ? (
 //   <div>

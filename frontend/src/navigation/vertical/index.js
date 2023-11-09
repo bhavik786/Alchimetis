@@ -1,4 +1,4 @@
-import { Mail, Home, User } from "react-feather";
+import { Mail, Home, User, BarChart2, Book } from "react-feather";
 
 const userData = JSON.parse(localStorage.getItem("userJson"));
 
@@ -35,8 +35,14 @@ if (role == "Admin") {
     {
       id: "reports",
       title: "Reports",
-      icon: <Mail size={20} />,
+      icon: <Book size={20} />,
       navLink: "/reports",
+    },
+    {
+      id: "advanceReports",
+      title: "Advance Reports",
+      icon: <BarChart2 size={20} />,
+      navLink: "/advanceReports",
     },
   ];
 } else {
@@ -62,8 +68,14 @@ if (role == "Admin") {
     {
       id: "reports",
       title: "Reports",
-      icon: <Mail size={20} />,
+      icon: <Book size={20} />,
       navLink: "/reports",
+    },
+    {
+      id: "advanceReports",
+      title: "Advance Reports",
+      icon: <BarChart2 size={20} />,
+      navLink: "/advanceReports",
     },
   ];
 }
