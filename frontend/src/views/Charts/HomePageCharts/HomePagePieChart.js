@@ -12,7 +12,7 @@ import {
   CardSubtitle,
 } from "reactstrap";
 
-import activityByGroupData from "../../csvData/ActivityByGroup.csv";
+import activityByGroupData from "../../../csvData/ActivityByGroup.csv";
 import { useEffect } from "react";
 
 const ApexRadiarChart = () => {

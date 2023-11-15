@@ -1,29 +1,15 @@
 // ** Third Party Components
 import { Bar } from "react-chartjs-2";
-import Flatpickr from "react-flatpickr";
-import { Calendar } from "react-feather";
 
 // ** Reactstrap Imports
 import { Card, CardHeader, CardTitle, CardBody } from "reactstrap";
+import { gridLineColor, successColorShade } from "../../../Utils/GlobalColors";
 
 const HomePageBar2Chart = () => {
   // ** Chart Options
 
   const labelColor = "#6e6b7b";
-  const tooltipShadow = "rgba(0, 0, 0, 0.25)";
-  const gridLineColor = "rgba(200, 200, 200, 0.2)";
-  const lineChartPrimary = "#666ee8";
-  const lineChartDanger = "#ff4961";
-  const warningColorShade = "#ffbd1f";
-  const warningLightColor = "#FDAC34";
-  const successColorShade = "#28dac6";
-  const primaryColorShade = "#836AF9";
-  const infoColorShade = "#299AFF";
-  const yellowColor = "#ffe800";
-  const greyColor = "#4F5D70";
-  const blueColor = "#2c9aff";
-  const blueLightColor = "#84D0FF";
-  const greyLightColor = "#EDF1F4";
+
   const options = {
     responsive: true,
     maintainAspectRatio: false,

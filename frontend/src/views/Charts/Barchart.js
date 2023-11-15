@@ -72,17 +72,6 @@ const ChartjsBarChart = ({ success, gridLineColor, labelColor }) => {
         <CardTitle tag="h4">Latest Statistics</CardTitle>
         <div className="d-flex align-items-center">
           <Calendar size={14} />
-          {/* <Flatpickr
-            className="form-control flat-picker bg-transparent border-0 shadow-none"
-            options={{
-              mode: "range",
-              // eslint-disable-next-line no-mixed-operators
-              defaultDate: [
-                new Date(),
-                new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000),
-              ],
-            }}
-          /> */}
         </div>
       </CardHeader>
       <CardBody>

@@ -12,7 +12,7 @@ import {
   CardSubtitle,
 } from "reactstrap";
 
-import ActivityByDataType2 from "../../csvData/ActivityByDataType2.csv";
+import ActivityByDataType2 from "../../../csvData/ActivityByDataType2.csv";
 import { useEffect } from "react";
 import { readString } from "react-papaparse";
 

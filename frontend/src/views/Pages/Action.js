@@ -17,21 +17,34 @@ import {
   Button,
 } from "reactstrap";
 
-import { Bell, Check, X, AlertTriangle, Info } from "react-feather";
+import {
+  Bell,
+  Check,
+  X,
+  AlertTriangle,
+  Info,
+  ArrowDownRight,
+  ArrowRight,
+  ArrowRightCircle,
+  ChevronLeft,
+  ChevronRight,
+} from "react-feather";
 import { useState } from "react";
 import { SuccessToast } from "../../Toast";
+import { useHistory } from "react-router-dom";
 
 const ActionPage = () => {
   const [state, setState] = useState({
     selectedFrameWork: "GRI",
   });
-
+  const history = useHistory();
   const submitClicked = () => {
-    return toast.success(<SuccessToast framework={state.selectedFrameWork} />, {
-      icon: false,
-      hideProgressBar: true,
-      transition: Zoom,
-    });
+    history.push("/griFrameworkPage");
+    // return toast.success(<SuccessToast framework={state.selectedFrameWork} />, {
+    //   icon: false,
+    //   hideProgressBar: true,
+    //   transition: Zoom,
+    // });
   };
 
   const handleRadioButton = (e) => {
@@ -101,7 +114,8 @@ const ActionPage = () => {
             color="primary"
             onClick={submitClicked}
           >
-            Submit
+            Next
+            <ChevronRight style={{ marginLeft: "15px" }} size={15} />
           </Button>
         </Form>
       </CardBody>

@@ -8,7 +8,7 @@ import {
   CardLink,
 } from "reactstrap";
 
-const Home = () => {
+const DataLakePage = () => {
   return (
     <div>
       <Card>
@@ -16,11 +16,11 @@ const Home = () => {
           <CardTitle>Welcome ...</CardTitle>
         </CardHeader>
         <CardBody>
-          <CardText>Welcome to DateLAke Page</CardText>
+          <CardText>Welcome to DateLake Page</CardText>
         </CardBody>
       </Card>
     </div>
   );
 };
 
-export default Home;
+export default DataLakePage;

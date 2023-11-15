@@ -32,7 +32,19 @@ const Routes = [
     path: "/advanceReports",
     component: lazy(() => import("../../views/Pages/AdvanceReports")),
   },
+  {
+    path: "/sustainabilityPage",
+    component: lazy(() => import("../../views/Pages/SustainabilityReportPage")),
+  },
 
+  {
+    path: "/griFrameworkPage",
+    component: lazy(() => import("../../views/Pages/GriFramework")),
+  },
+  {
+    path: "/viewEmissionReportPage",
+    component: lazy(() => import("../../views/Pages/EmissionReportPage")),
+  },
   {
     path: "/second-page",
     component: lazy(() => import("../../views/SecondPage")),

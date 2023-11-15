@@ -12,11 +12,10 @@ import {
 } from "reactstrap";
 
 import { ThemeColors } from "@src/utility/context/ThemeColors";
-import ChartjsBarChart from "./Charts/Barchart";
-import SimpleLineChart from "./Charts/NewLine";
-import HomePagePieChart from "./Charts/HomePagePieChart";
-import HomePageBarChart from "./Charts/HomaPageBarChart";
-import HomePageBar2Chart from "./Charts/HomePageBar2Chart";
+
+import HomePagePieChart from "./Charts/HomePageCharts/HomePagePieChart";
+import HomePageBarChart from "./Charts/HomePageCharts/HomaPageBarChart";
+import HomePageBar2Chart from "./Charts/HomePageCharts/HomePageBar2Chart";
 
 const Home = () => {
   return (

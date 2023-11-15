@@ -9,36 +9,15 @@ import {
   CardBody,
   CardSubtitle,
 } from "reactstrap";
+import { detectLabelField, detectValueField } from "../../../Utils/UtilFunc";
 
-const ApexRadiarChart = ({ data }) => {
+const SimplePieChart = ({ data }) => {
   const donutColors = {
     series1: "#ffe700",
     series2: "#00d4bd",
     series3: "#826bf8",
     series4: "#2b9bf4",
     series5: "#FFA1A1",
-  };
-  const detectLabelField = (data) => {
-    // Iterate through the keys of the first entry and find the first key with a string value
-    for (const key in data[0]) {
-      if (typeof data[0][key] === "string") {
-        return key;
-      }
-    }
-    console.error("No suitable label field found.");
-    return null;
-  };
-
-  const detectValueField = (data) => {
-    // Iterate through the keys of the first entry and find the first key with a numeric value
-    for (const key in data[0]) {
-      const value = parseFloat(data[0][key]);
-      if (!isNaN(value)) {
-        return key;
-      }
-    }
-    console.error("No suitable value field found.");
-    return null;
   };
 
   let labelArray = [];
@@ -52,9 +31,7 @@ const ApexRadiarChart = ({ data }) => {
         if (index == 0) {
           labelField = detectLabelField(data);
           valueField = detectValueField(data);
-          console.log("====================================");
-          console.log({ labelField: labelField, valueField: valueField });
-          console.log("====================================");
+
           const label = obj[`${labelField}`];
           labelArray.push(label);
 
@@ -73,10 +50,6 @@ const ApexRadiarChart = ({ data }) => {
   };
 
   setDataFromCsv();
-
-  console.log("====================================");
-  console.log({ labelArray, valueArray });
-  console.log("====================================");
 
   // ** Chart Options
   const options = {
@@ -180,4 +153,4 @@ const ApexRadiarChart = ({ data }) => {
   );
 };
 
-export default ApexRadiarChart;
+export default SimplePieChart;
