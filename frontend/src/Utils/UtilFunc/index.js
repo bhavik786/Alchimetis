@@ -1,3 +1,5 @@
+import html2canvas from "html2canvas";
+
 export const detectLabelField = (data) => {
   // Iterate through the keys of the first entry and find the first key with a string value
   for (const key in data[0]) {
@@ -19,4 +21,20 @@ export const detectValueField = (data) => {
   }
   console.error("No suitable value field found.");
   return null;
+};
+
+export const handleDownload = async (format, fileName, id) => {
+  const component = document.getElementById(id);
+
+  if (!component) {
+    console.error("Component element not found");
+    return;
+  }
+
+  const canvas = await html2canvas(component);
+  const dataURL = canvas.toDataURL(`image/${format}`);
+  const link = document.createElement("a");
+  link.href = dataURL;
+  link.download = `${fileName}.${format}`;
+  link.click();
 };

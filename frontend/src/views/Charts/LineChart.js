@@ -1,5 +1,5 @@
+/* eslint-disable */
 // ** Third Party Components
-import { useEffect } from "react";
 import Chart from "react-apexcharts";
 import { ArrowDown } from "react-feather";
 
@@ -13,28 +13,23 @@ import {
   Badge,
 } from "reactstrap";
 
-const ApexLineChart = ({ direction, warning, chartData }) => {
+const ApexLineChart = ({ direction, warning, data, selectedFieldForChart }) => {
   // ** Chart Options
-  let scope1 = [];
-  let scope2 = [];
-  let scope3 = [];
-  let dateData = [];
-  useEffect(() => {
-    chartData &&
-      chartData.map((data) => {
-        if (data) {
-          data && scope1.push(data["Scope 1"]);
-          data && scope2.push(data["Scope 2"]);
-          data && scope3.push(data["Scope 3"]);
-          data && dateData.push(data["Date"]);
-        }
+
+  let labelArray = [];
+  let valueArray = [];
+  const setDataBasedOnOptions = () => {
+    data &&
+      data.map((field) => {
+        const label = field[`${selectedFieldForChart.label}`];
+        labelArray.push(label);
+
+        const value = field[`${selectedFieldForChart.value}`];
+        valueArray.push(Number(value));
       });
-  }, [chartData]);
-  const lineColors = {
-    line1: "#2196F3",
-    line2: "#1976D2",
-    line3: "#1565C0",
   };
+
+  setDataBasedOnOptions();
   const options = {
     chart: {
       zoom: {
@@ -75,10 +70,8 @@ const ApexLineChart = ({ direction, warning, chartData }) => {
             </div>`;
       },
     },
-    colors: [lineColors.line3, lineColors.line1, lineColors.line2],
-
     xaxis: {
-      categories: dateData,
+      categories: labelArray,
     },
     yaxis: {
       opposite: direction === "rtl",
@@ -88,16 +81,7 @@ const ApexLineChart = ({ direction, warning, chartData }) => {
   // ** Chart Series
   const series = [
     {
-      name: "Scope 1",
-      data: scope1,
-    },
-    {
-      name: "Scope 2",
-      data: scope2,
-    },
-    {
-      name: "Scope 3",
-      data: scope3,
+      data: valueArray,
     },
   ];
 
@@ -105,19 +89,8 @@ const ApexLineChart = ({ direction, warning, chartData }) => {
     <Card>
       <CardHeader className="d-flex flex-sm-row flex-column justify-content-md-between align-items-start justify-content-start">
         <div>
-          <CardTitle className="mb-75" tag="h4">
-            Balance
-          </CardTitle>
-          <CardSubtitle className="text-muted">
-            Commercial networks & enterprises
-          </CardSubtitle>
-        </div>
-        <div className="d-flex align-items-center flex-wrap mt-sm-0 mt-1">
-          <h5 className="fw-bolder mb-0 me-1">$ 100,000</h5>
-          <Badge color="light-secondary">
-            <ArrowDown size={13} className="text-danger" />
-            <span className="align-middle ms-25">20%</span>
-          </Badge>
+          <CardTitle className="mb-75" tag="h4"></CardTitle>
+          <CardSubtitle className="text-muted"></CardSubtitle>
         </div>
       </CardHeader>
       <CardBody>

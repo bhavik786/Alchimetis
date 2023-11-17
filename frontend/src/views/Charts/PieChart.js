@@ -30,22 +30,6 @@ const ApexRadiarChart = ({ data, selectedFieldForChart }) => {
         const value = field[`${selectedFieldForChart.value}`];
         valueArray.push(Number(value));
       });
-    // selectedFieldForChart &&
-    //   selectedFieldForChart.map((options, index) => {
-    //     data &&
-    //       data.map((fields) => {
-    //         if (index == 0) {
-    //           console.log("====================================");
-    //           console.log(fields[`${options}`]);
-    //           console.log("====================================");
-    //           const label = fields[`${options}`];
-    //           labelArray.push(label);
-    //         } else {
-    //           const value = fields[`${options}`];
-    //           valueArray.push(value);
-    //         }
-    //       });
-    //   });
   };
 
   setDataBasedOnOptions();

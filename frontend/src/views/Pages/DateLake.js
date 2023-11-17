@@ -19,7 +19,6 @@ const DataLakePage = () => {
         <CardBody>
           <CardText>Welcome to DateLake Page</CardText>
         </CardBody>
-        <RepeatBlock />{" "}
       </Card>
     </div>
   );

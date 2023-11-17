@@ -6,8 +6,29 @@ import { Calendar } from "react-feather";
 // ** Reactstrap Imports
 import { Card, CardHeader, CardTitle, CardBody } from "reactstrap";
 
-const ChartjsBarChart = ({ success, gridLineColor, labelColor }) => {
+const ChartjsBarChart = ({
+  success,
+  gridLineColor,
+  labelColor,
+  data,
+  selectedFieldForChart,
+}) => {
   // ** Chart Options
+  let labelArray = [];
+  let valueArray = [];
+  const setDataBasedOnOptions = () => {
+    data &&
+      data.map((field) => {
+        const label = field[`${selectedFieldForChart.label}`];
+        labelArray.push(label);
+
+        const value = field[`${selectedFieldForChart.value}`];
+        valueArray.push(Number(value));
+      });
+  };
+
+  setDataBasedOnOptions();
+
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -39,29 +60,15 @@ const ChartjsBarChart = ({ success, gridLineColor, labelColor }) => {
   };
 
   // ** Chart data
-  const data = {
-    labels: [
-      "7/12",
-      "8/12",
-      "9/12",
-      "10/12",
-      "11/12",
-      "12/12",
-      "13/12",
-      "14/12",
-      "15/12",
-      "16/12",
-      "17/12",
-      "18/12",
-      "19/12",
-    ],
+  const data1 = {
+    labels: labelArray,
     datasets: [
       {
         maxBarThickness: 15,
         backgroundColor: success,
         borderColor: "transparent",
         borderRadius: { topRight: 15, topLeft: 15 },
-        data: [275, 90, 190, 205, 125, 85, 55, 87, 127, 150, 230, 280, 190],
+        data: valueArray,
       },
     ],
   };
@@ -76,7 +83,7 @@ const ChartjsBarChart = ({ success, gridLineColor, labelColor }) => {
       </CardHeader>
       <CardBody>
         <div style={{ height: "400px" }}>
-          <Bar data={data} options={options} height={400} />
+          <Bar data={data1} options={options} height={400} />
         </div>
       </CardBody>
     </Card>

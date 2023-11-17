@@ -91,7 +91,11 @@ const AdvanceReportPage = () => {
 
   return (
     <div>
-      <Block />
+      <Row>
+        <Col>
+          <Block />
+        </Col>
+      </Row>
     </div>
   );
 };
