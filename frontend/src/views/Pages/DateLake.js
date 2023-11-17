@@ -7,6 +7,7 @@ import {
   CardText,
   CardLink,
 } from "reactstrap";
+import RepeatBlock from "../../Components/RepeatBlock";
 
 const DataLakePage = () => {
   return (
@@ -18,6 +19,7 @@ const DataLakePage = () => {
         <CardBody>
           <CardText>Welcome to DateLake Page</CardText>
         </CardBody>
+        <RepeatBlock />{" "}
       </Card>
     </div>
   );

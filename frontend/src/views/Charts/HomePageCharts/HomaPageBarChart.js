@@ -2,7 +2,7 @@
 import Chart from "react-apexcharts";
 import Flatpickr from "react-flatpickr";
 import { Calendar } from "react-feather";
-
+import axios from "axios";
 // ** Reactstrap Imports
 import {
   Card,
@@ -34,7 +34,12 @@ const HomePageBarChart = ({ info, direction }) => {
         // },
         complete: (results) => {
           console.log(results);
-
+          axios
+            .post("http://localhost:8000/posts", {
+              name: "Activity By datatype 2",
+              data: results.data,
+            })
+            .then((response) => console.log(response));
           barData = results.data;
           barData.map((obj) => {
             console.log("====================================");

@@ -26,6 +26,7 @@ import activityByPeriodByScope2 from "../Charts/Activity by period by scope 2.cs
 import Select from "react-select";
 
 import PieChart from "../Charts/PieChart";
+import Block from "./Block";
 const AdvanceReportPage = () => {
   const { readString } = usePapaParse();
   const { colors } = useContext(ThemeColors);
@@ -90,51 +91,7 @@ const AdvanceReportPage = () => {
 
   return (
     <div>
-      <Card>
-        <CardHeader>
-          <CardTitle>Reports</CardTitle>
-        </CardHeader>
-        <CardBody>
-          <Row>
-            <Col xxl={6} xl={6} xs={6}>
-              <Label>Upload Csv Data</Label>
-              <Input type="file" accept=".csv" onChange={handleFileUpload} />
-            </Col>
-            <Col xxl={6} xl={6} xs={4}>
-              <Label>Select Chart Type</Label>
-              <Select options={chartTypeOptions} onChange={handleChartChange} />
-            </Col>
-            <Col xxl={6} xl={6} xs={6}>
-              <Label>Select Fields</Label>
-              <Select
-                options={state.chartFieldsOptions}
-                isMulti
-                onChange={(options) => {
-                  setState({ ...state, selectedChartFieldsOptions: options });
-                }}
-                isOptionDisabled={() =>
-                  state.selectedChartFieldsOptions.length >=
-                  state.maxNumberBasedOnChart
-                }
-              />
-            </Col>
-          </Row>
-          <Row style={{ marginTop: "20px" }}>
-            <Col xxl={6} xl={6} xs={4}>
-              <Button color="primary">Submit</Button>
-            </Col>
-          </Row>
-
-          <Row style={{ marginTop: "20px" }}>
-            <Col xxl={6} xl={6} xs={4}>
-              <PieChart
-                data={state.csvParsedData}
-                selectedFieldForChart={state.selectedChartFieldsOptions}
-              />
-            </Col>
-          </Row>
-        </CardBody>
-      </Card>
+      <Block />
     </div>
   );
 };

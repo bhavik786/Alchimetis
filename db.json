@@ -1,0 +1,377 @@
+{
+  "csvFiles": [
+    {
+      "name": "Activity By datatype 2",
+      "data": [
+        {
+          "Measures": "Electricity [kWh]",
+          "CO2e  (t)": "72578.5421",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "76979.2961",
+          "Proportion (%)": "64.95",
+          "Variance (%)": "-5.71",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Natural Gas [cf]",
+          "CO2e  (t)": "14164.8773",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "14099.5069",
+          "Proportion (%)": "12.67",
+          "Variance (%)": "0.46",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Natural Gas [therms]",
+          "CO2e  (t)": "9564.6118",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "9618.1609",
+          "Proportion (%)": "8.56",
+          "Variance (%)": "-0.55",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Refrigerant HFC-143a [kg]",
+          "CO2e  (t)": "8048.4",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "5947",
+          "Proportion (%)": "7.2",
+          "Variance (%)": "35.33",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Refrigerant R22 [kg]",
+          "CO2e  (t)": "5084.0365",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "4937.2382",
+          "Proportion (%)": "4.55",
+          "Variance (%)": "2.97",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Steam [therms]",
+          "CO2e  (t)": "1191.6829",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "1182.5376",
+          "Proportion (%)": "1.06",
+          "Variance (%)": "0.77",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Natural Gas [GJ]",
+          "CO2e  (t)": "634.6655",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "635.3697",
+          "Proportion (%)": "0.56",
+          "Variance (%)": "-0.11",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Steam [MMBtu]",
+          "CO2e  (t)": "485.8747",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "485.1956",
+          "Proportion (%)": "0.43",
+          "Variance (%)": "0.13",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Diesel Transport [gal]",
+          "CO2e  (t)": "292.4485",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "294.8408",
+          "Proportion (%)": "0.26",
+          "Variance (%)": "-0.81",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Diesel Stationary [L]",
+          "CO2e  (t)": "30.62",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "28.5328",
+          "Proportion (%)": "0.02",
+          "Variance (%)": "7.31",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Business flights [miles]",
+          "CO2e  (t)": "2.4642",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "68.0894",
+          "Proportion (%)": "0",
+          "Variance (%)": "-96.38",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Paper [kg]",
+          "CO2e  (t)": "1.0787",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "4.2337",
+          "Proportion (%)": "0",
+          "Variance (%)": "-74.52",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Electricity - Green [kWh]",
+          "CO2e  (t)": "-350.4697",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "-356.801",
+          "Proportion (%)": "-0.31",
+          "Variance (%)": "-1.77",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Activity By datatype 2",
+      "data": [
+        {
+          "Measures": "Electricity [kWh]",
+          "CO2e  (t)": "72578.5421",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "76979.2961",
+          "Proportion (%)": "64.95",
+          "Variance (%)": "-5.71",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Natural Gas [cf]",
+          "CO2e  (t)": "14164.8773",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "14099.5069",
+          "Proportion (%)": "12.67",
+          "Variance (%)": "0.46",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Natural Gas [therms]",
+          "CO2e  (t)": "9564.6118",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "9618.1609",
+          "Proportion (%)": "8.56",
+          "Variance (%)": "-0.55",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Refrigerant HFC-143a [kg]",
+          "CO2e  (t)": "8048.4",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "5947",
+          "Proportion (%)": "7.2",
+          "Variance (%)": "35.33",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Refrigerant R22 [kg]",
+          "CO2e  (t)": "5084.0365",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "4937.2382",
+          "Proportion (%)": "4.55",
+          "Variance (%)": "2.97",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Steam [therms]",
+          "CO2e  (t)": "1191.6829",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "1182.5376",
+          "Proportion (%)": "1.06",
+          "Variance (%)": "0.77",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Natural Gas [GJ]",
+          "CO2e  (t)": "634.6655",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "635.3697",
+          "Proportion (%)": "0.56",
+          "Variance (%)": "-0.11",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Steam [MMBtu]",
+          "CO2e  (t)": "485.8747",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "485.1956",
+          "Proportion (%)": "0.43",
+          "Variance (%)": "0.13",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Diesel Transport [gal]",
+          "CO2e  (t)": "292.4485",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "294.8408",
+          "Proportion (%)": "0.26",
+          "Variance (%)": "-0.81",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Diesel Stationary [L]",
+          "CO2e  (t)": "30.62",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "28.5328",
+          "Proportion (%)": "0.02",
+          "Variance (%)": "7.31",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Business flights [miles]",
+          "CO2e  (t)": "2.4642",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "68.0894",
+          "Proportion (%)": "0",
+          "Variance (%)": "-96.38",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Paper [kg]",
+          "CO2e  (t)": "1.0787",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "4.2337",
+          "Proportion (%)": "0",
+          "Variance (%)": "-74.52",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Electricity - Green [kWh]",
+          "CO2e  (t)": "-350.4697",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "-356.801",
+          "Proportion (%)": "-0.31",
+          "Variance (%)": "-1.77",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "Activity By datatype 2",
+      "data": [
+        {
+          "Measures": "Electricity [kWh]",
+          "CO2e  (t)": "72578.5421",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "76979.2961",
+          "Proportion (%)": "64.95",
+          "Variance (%)": "-5.71",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Natural Gas [cf]",
+          "CO2e  (t)": "14164.8773",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "14099.5069",
+          "Proportion (%)": "12.67",
+          "Variance (%)": "0.46",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Natural Gas [therms]",
+          "CO2e  (t)": "9564.6118",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "9618.1609",
+          "Proportion (%)": "8.56",
+          "Variance (%)": "-0.55",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Refrigerant HFC-143a [kg]",
+          "CO2e  (t)": "8048.4",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "5947",
+          "Proportion (%)": "7.2",
+          "Variance (%)": "35.33",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Refrigerant R22 [kg]",
+          "CO2e  (t)": "5084.0365",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "4937.2382",
+          "Proportion (%)": "4.55",
+          "Variance (%)": "2.97",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Steam [therms]",
+          "CO2e  (t)": "1191.6829",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "1182.5376",
+          "Proportion (%)": "1.06",
+          "Variance (%)": "0.77",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Natural Gas [GJ]",
+          "CO2e  (t)": "634.6655",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "635.3697",
+          "Proportion (%)": "0.56",
+          "Variance (%)": "-0.11",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Steam [MMBtu]",
+          "CO2e  (t)": "485.8747",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "485.1956",
+          "Proportion (%)": "0.43",
+          "Variance (%)": "0.13",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Diesel Transport [gal]",
+          "CO2e  (t)": "292.4485",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "294.8408",
+          "Proportion (%)": "0.26",
+          "Variance (%)": "-0.81",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Diesel Stationary [L]",
+          "CO2e  (t)": "30.62",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "28.5328",
+          "Proportion (%)": "0.02",
+          "Variance (%)": "7.31",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Business flights [miles]",
+          "CO2e  (t)": "2.4642",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "68.0894",
+          "Proportion (%)": "0",
+          "Variance (%)": "-96.38",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Paper [kg]",
+          "CO2e  (t)": "1.0787",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "4.2337",
+          "Proportion (%)": "0",
+          "Variance (%)": "-74.52",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        },
+        {
+          "Measures": "Electricity - Green [kWh]",
+          "CO2e  (t)": "-350.4697",
+          "CO2e  (t)-Previous Period (Oct 2021 - Sep 2022)": "-356.801",
+          "Proportion (%)": "-0.31",
+          "Variance (%)": "-1.77",
+          "Start Period": "Oct 2022",
+          "End Period": "Sep 2023"
+        }
+      ],
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

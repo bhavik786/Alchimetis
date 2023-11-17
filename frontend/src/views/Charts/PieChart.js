@@ -22,22 +22,30 @@ const ApexRadiarChart = ({ data, selectedFieldForChart }) => {
   let labelArray = [];
   let valueArray = [];
   const setDataBasedOnOptions = () => {
-    selectedFieldForChart &&
-      selectedFieldForChart.map((options, index) => {
-        data &&
-          data.map((fields) => {
-            if (index == 0) {
-              console.log("====================================");
-              console.log(fields[`${options}`]);
-              console.log("====================================");
-              const label = fields[`${options}`];
-              labelArray.push(label);
-            } else {
-              const value = fields[`${options}`];
-              valueArray.push(value);
-            }
-          });
+    data &&
+      data.map((field) => {
+        const label = field[`${selectedFieldForChart.label}`];
+        labelArray.push(label);
+
+        const value = field[`${selectedFieldForChart.value}`];
+        valueArray.push(Number(value));
       });
+    // selectedFieldForChart &&
+    //   selectedFieldForChart.map((options, index) => {
+    //     data &&
+    //       data.map((fields) => {
+    //         if (index == 0) {
+    //           console.log("====================================");
+    //           console.log(fields[`${options}`]);
+    //           console.log("====================================");
+    //           const label = fields[`${options}`];
+    //           labelArray.push(label);
+    //         } else {
+    //           const value = fields[`${options}`];
+    //           valueArray.push(value);
+    //         }
+    //       });
+    //   });
   };
 
   setDataBasedOnOptions();
@@ -50,7 +58,7 @@ const ApexRadiarChart = ({ data, selectedFieldForChart }) => {
       show: true,
       position: "bottom",
     },
-    labels: ["Operational", "Networking", "Hiring", "R&D"],
+    labels: labelArray,
 
     colors: [
       donutColors.series1,
@@ -134,7 +142,7 @@ const ApexRadiarChart = ({ data, selectedFieldForChart }) => {
   };
 
   // ** Chart Series
-  const series = [85, 16, 50, 50];
+  const series = valueArray;
 
   return (
     <Card>

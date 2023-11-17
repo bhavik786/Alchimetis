@@ -38,12 +38,12 @@ if (role == "Admin") {
       icon: <Book size={20} />,
       navLink: "/reports",
     },
-    // {
-    //   id: "advanceReports",
-    //   title: "Advance Reports",
-    //   icon: <BarChart2 size={20} />,
-    //   navLink: "/advanceReports",
-    // },
+    {
+      id: "advanceReports",
+      title: "Advance Reports",
+      icon: <BarChart2 size={20} />,
+      navLink: "/advanceReports",
+    },
   ];
 } else {
   routes = [
@@ -71,12 +71,12 @@ if (role == "Admin") {
       icon: <Book size={20} />,
       navLink: "/reports",
     },
-    // {
-    //   id: "advanceReports",
-    //   title: "Advance Reports",
-    //   icon: <BarChart2 size={20} />,
-    //   navLink: "/advanceReports",
-    // },
+    {
+      id: "advanceReports",
+      title: "Advance Reports",
+      icon: <BarChart2 size={20} />,
+      navLink: "/advanceReports",
+    },
   ];
 }
 
