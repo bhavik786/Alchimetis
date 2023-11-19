@@ -17,6 +17,8 @@ import {
 import "@styles/react/pages/page-authentication.scss";
 import { useForm, Controller } from "react-hook-form";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
+import { loginUser } from "../../../Utils/GlobalApiRoutes";
 
 const LoginCover = () => {
   const { skin } = useSkin();
@@ -45,27 +47,39 @@ const LoginCover = () => {
     source = require(`@src/assets/images/pages/${illustration}`).default;
 
   const submitForm = (data) => {
-    const email = data && data.email;
-
-    if (email == "admin@gmail.com") {
-      data.role = "Admin";
-      localStorage.setItem("userJson", JSON.stringify(data));
-    } else if (email == "superuser@gmail.com") {
-      data.role = "SuperUser";
-      localStorage.setItem("userJson", JSON.stringify(data));
-    } else if (email == "user@gmail.com") {
-      data.role = "User";
-      localStorage.setItem("userJson", JSON.stringify(data));
-    }
-
-    history.push("/home");
+    axios
+      .post(loginUser, data)
+      .then((response) => {
+        let dataR = {
+          user: response.data.user,
+          accessToken: response.data.accessToken,
+        };
+        console.log(dataR);
+        localStorage.setItem("userJson", JSON.stringify(dataR));
+        history.push("/home");
+      })
+      .catch((err) => {
+        alert("Please enter correct email or password !");
+      });
+    // const email = data && data.email;
+    // if (email == "admin@gmail.com") {
+    //   data.role = "Admin";
+    //   localStorage.setItem("userJson", JSON.stringify(data));
+    // } else if (email == "superuser@gmail.com") {
+    //   data.role = "SuperUser";
+    //   localStorage.setItem("userJson", JSON.stringify(data));
+    // } else if (email == "user@gmail.com") {
+    //   data.role = "User";
+    //   localStorage.setItem("userJson", JSON.stringify(data));
+    // }
+    // history.push("/home");
   };
 
   return (
     <div className="auth-wrapper auth-cover">
       <Row className="auth-inner m-0">
         <Link className="brand-logo" to="/" onClick={(e) => e.preventDefault()}>
-          <h2 className="brand-text text-primary ms-1">Alchimetis </h2>
+          <h2 className="brand-text text-primary ms-1">Eco Focus </h2>
         </Link>
         <Col className="d-none d-lg-flex align-items-center p-5" lg="8" sm="12">
           <div className="w-100 d-lg-flex align-items-center justify-content-center px-5">
@@ -105,12 +119,6 @@ const LoginCover = () => {
                     />
                   )}
                 />
-                {/* <Input
-                  type="email"
-                  id="login-email"
-                  placeholder="john@example.com"
-                  autoFocus
-                /> */}
               </div>
               <div className="mb-1">
                 <div className="d-flex justify-content-between">
@@ -144,29 +152,12 @@ const LoginCover = () => {
               </div>
               <Button color="primary">Sign in</Button>
             </Form>
-            {/* <p className="text-center mt-2">
+            <p className="text-center mt-2">
               <span className="me-25">New on our platform?</span>
-              <Link to="/pages/register-cover">
+              <Link to="/register">
                 <span>Create an account</span>
               </Link>
             </p>
-            <div className="divider my-2">
-              <div className="divider-text">or</div>
-            </div>
-            <div className="auth-footer-btn d-flex justify-content-center">
-              <Button color="facebook">
-                <Facebook size={14} />
-              </Button>
-              <Button color="twitter">
-                <Twitter size={14} />
-              </Button>
-              <Button color="google">
-                <Mail size={14} />
-              </Button>
-              <Button className="me-0" color="github">
-                <GitHub size={14} />
-              </Button>
-            </div> */}
           </Col>
         </Col>
       </Row>

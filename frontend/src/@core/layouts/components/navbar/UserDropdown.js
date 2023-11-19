@@ -62,8 +62,8 @@ const UserDropdown = () => {
 
     setState({
       ...state,
-      userRole: userData.role || "Bhavik",
-      userEmail: userData.email || "bhavik@gmail.com",
+      userRole: (userData && userData.user.role) || "Admin",
+      userEmail: (userData && userData.user.email) || "admin@gmail.com",
     });
   }, []);
 

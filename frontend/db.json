@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$47zoMq0Np51JmV1qPSMzceg6DzbTQtK15RdmDK.8274wxuTDRtpzq",
+      "username": "Admin123",
+      "organizationName": "EcoFocus",
+      "organizationSector": {
+        "label": "Oil and Gas",
+        "value": "oilAndGas"
+      },
+      "organizationSize": {
+        "label": "101 - 500",
+        "value": "101to500"
+      },
+      "natureOfOrganization": {
+        "label": "Nature 2",
+        "value": "nature2"
+      },
+      "griFrameworkSelection": [
+        {
+          "label": "GRI 1",
+          "value": "gri1"
+        },
+        {
+          "label": "GRI 2",
+          "value": "gri2"
+        },
+        {
+          "label": "GRI 3",
+          "value": "gri3"
+        }
+      ],
+      "csvFiles": [],
+      "id": 1
+    },
+    {
+      "email": "user@gmail.com",
+      "password": "$2a$10$UPY/X0wTgHp.B4XAFQ1dJOq7/8uLwK9mPQyqCR2BdJtSpFPFIxGPK",
+      "username": "user123",
+      "organizationName": "User Org",
+      "organizationSector": {
+        "label": "Coal",
+        "value": "coal"
+      },
+      "organizationSize": {
+        "label": "101 - 500",
+        "value": "101to500"
+      },
+      "natureOfOrganization": {
+        "label": "Nature 2",
+        "value": "nature2"
+      },
+      "griFrameworkSelection": [
+        {
+          "label": "GRI 2",
+          "value": "gri2"
+        },
+        {
+          "label": "GRI 3",
+          "value": "gri3"
+        }
+      ],
+      "csvFiles": [],
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

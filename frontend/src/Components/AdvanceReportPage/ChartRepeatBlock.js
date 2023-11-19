@@ -17,19 +17,20 @@ import Repeater from "@components/repeater";
 import { ThemeColors } from "@src/utility/context/ThemeColors";
 import { useContext, useEffect, useState } from "react";
 import { usePapaParse } from "react-papaparse";
-
 import Select from "react-select";
-
-// import PieChart from "../Charts/PieChart";
-import PieChartBlock from "../Charts/PieChart";
-import BarChartBlock from "./../Charts/Barchart";
 import { Plus, X } from "react-feather";
-import LineChartBlock from "../Charts/LineChart";
+
+//import external func
 import { handleDownload } from "../../Utils/UtilFunc/index";
 
-import html2canvas from "html2canvas";
+//import charts
+import LineChartBlock from "../../views/Charts/LineChart";
+import PieChartBlock from "../../views/Charts/PieChart";
+import BarChartBlock from "../../views/Charts/Barchart";
+import { Zoom, toast } from "react-toastify";
+import { SuccessToastChart } from "../../Toast";
 
-const Block = () => {
+const ChartRepeatBlock = () => {
   const { readString } = usePapaParse();
   const { colors } = useContext(ThemeColors);
   const labelColor = "#6e6b7b";
@@ -41,6 +42,7 @@ const Block = () => {
 
   const increaseCount = () => {
     setCount(count + 1);
+    window.scrollTo(0, document.body.scrollHeight);
   };
 
   const chartTypeOptions = [
@@ -56,6 +58,12 @@ const Block = () => {
       return newData;
     });
     setCount(count - 1);
+
+    toast.success(<SuccessToastChart message={"Chart Block Deleted !"} />, {
+      icon: false,
+      hideProgressBar: true,
+      transition: Zoom,
+    });
   };
 
   const handleInputChange = (index, field, value) => {
@@ -241,7 +249,8 @@ const Block = () => {
                                   handleDownload(
                                     "png",
                                     "Pie_Report",
-                                    `chart-${i}`
+                                    `chart-${i}`,
+                                    "Pie Report Downloaded Successfully!"
                                   )
                                 }
                               >
@@ -279,7 +288,8 @@ const Block = () => {
                                   handleDownload(
                                     "png",
                                     "Bar_Report",
-                                    `chart-${i}`
+                                    `chart-${i}`,
+                                    "Bar Report Downloaded Successfully!"
                                   )
                                 }
                               >
@@ -318,7 +328,8 @@ const Block = () => {
                                   handleDownload(
                                     "png",
                                     "Line_Report",
-                                    `chart-${i}`
+                                    `chart-${i}`,
+                                    "Line Report Downloaded Successfully!"
                                   )
                                 }
                               >
@@ -342,4 +353,4 @@ const Block = () => {
   );
 };
 
-export default Block;
+export default ChartRepeatBlock;

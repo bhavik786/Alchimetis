@@ -1,4 +1,6 @@
 import html2canvas from "html2canvas";
+import { SuccessToastChart } from "../../Toast";
+import { Zoom, toast } from "react-toastify";
 
 export const detectLabelField = (data) => {
   // Iterate through the keys of the first entry and find the first key with a string value
@@ -23,7 +25,7 @@ export const detectValueField = (data) => {
   return null;
 };
 
-export const handleDownload = async (format, fileName, id) => {
+export const handleDownload = async (format, fileName, id, message) => {
   const component = document.getElementById(id);
 
   if (!component) {
@@ -37,4 +39,10 @@ export const handleDownload = async (format, fileName, id) => {
   link.href = dataURL;
   link.download = `${fileName}.${format}`;
   link.click();
+
+  toast.success(<SuccessToastChart message={message} />, {
+    icon: false,
+    hideProgressBar: true,
+    transition: Zoom,
+  });
 };

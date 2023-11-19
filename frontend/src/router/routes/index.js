@@ -50,8 +50,26 @@ const Routes = [
     component: lazy(() => import("../../views/SecondPage")),
   },
   {
+    path: "/database/uploadData",
+    component: lazy(() => import("../../views/Pages/DataBase/DataBasePage.js")),
+  },
+  {
+    path: "/database/viewData",
+    component: lazy(() => import("../../views/Pages/DataBase/CsvFileList.js")),
+  },
+  {
     path: "/login",
-    component: lazy(() => import("../../views/Login")),
+    component: lazy(() => import("../../views/Pages/Authentication/Login")),
+    layout: "BlankLayout",
+    meta: {
+      authRoute: true,
+    },
+  },
+  {
+    path: "/register",
+    component: lazy(() =>
+      import("../../views/Pages/Authentication/RegisterPage")
+    ),
     layout: "BlankLayout",
     meta: {
       authRoute: true,
