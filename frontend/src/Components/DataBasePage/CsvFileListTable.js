@@ -12,13 +12,18 @@ import axios from "axios";
 import { useState } from "react";
 import { Zoom, toast } from "react-toastify";
 import { SuccessToastChart } from "../../Toast";
+import { useDispatch, useSelector } from "react-redux";
+import { userLogin } from "../../Reducers/UserReducer";
 
 const DataTablesBasic = () => {
   const [fileList, setFileList] = useState([]);
+  const dispatch = useDispatch();
+  const { userData } = useSelector((state) => state.UserReducer);
 
   const getAllList = async () => {
-    let user = await axios.get("http://localhost:8000/users/1");
-    let csvListData = user.data.csvFiles;
+    // let user = await axios.get("http://localhost:8000/users/1");
+    let csvListData = userData && userData.csvFiles;
+
     setFileList(csvListData);
   };
   useEffect(async () => {
@@ -31,10 +36,12 @@ const DataTablesBasic = () => {
     );
     setFileList((prevData) => {
       axios
-        .patch("http://localhost:8000/users/1", {
+        .patch("http://localhost:8000/users/" + userData.id, {
           csvFiles: prevData,
         })
-        .then(() => {
+        .then((response) => {
+          console.log("response from update", response);
+          dispatch(userLogin(response && response.data));
           getAllList();
         })
         .catch((error) => {

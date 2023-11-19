@@ -33,10 +33,13 @@ import {
 
 // ** Default Avatar Image
 import defaultAvatar from "@src/assets/images/portrait/small/avatar-s-11.jpg";
+import { useDispatch } from "react-redux";
+import { handleLogout } from "../../../../Reducers/UserReducer";
 
 const UserDropdown = () => {
   // ** State
   const [userData] = useState(null);
+  const dispatch = useDispatch();
   const history = useHistory();
   //** ComponentDidMount
   // useEffect(() => {
@@ -52,18 +55,21 @@ const UserDropdown = () => {
   //** Vars
   const userAvatar = (userData && userData.avatar) || defaultAvatar;
 
-  const handleLogout = () => {
+  const handleLogoutFunc = () => {
     localStorage.clear();
+    dispatch(handleLogout());
     history.push("/login");
   };
 
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("userJson"));
-
+    console.log("====================================");
+    console.log(userData);
+    console.log("====================================");
     setState({
       ...state,
-      userRole: (userData && userData.user.role) || "Admin",
-      userEmail: (userData && userData.user.email) || "admin@gmail.com",
+      userRole: (userData && userData.role) || "Admin",
+      userEmail: (userData && userData.email) || "admin@gmail.com",
     });
   }, []);
 
@@ -143,7 +149,7 @@ const UserDropdown = () => {
           <HelpCircle size={14} className="me-75" />
           <span className="align-middle">FAQ</span>
         </DropdownItem> */}
-        <DropdownItem tag={Link} onClick={handleLogout} to="/login">
+        <DropdownItem tag={Link} onClick={handleLogoutFunc} to="/login">
           <Power size={14} className="me-75" />
           <span className="align-middle">Logout</span>
         </DropdownItem>

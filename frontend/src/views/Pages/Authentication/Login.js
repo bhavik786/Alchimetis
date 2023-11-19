@@ -19,10 +19,12 @@ import { useForm, Controller } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { loginUser } from "../../../Utils/GlobalApiRoutes";
+import { useDispatch } from "react-redux";
+import { userLogin } from "../../../Reducers/UserReducer";
 
 const LoginCover = () => {
   const { skin } = useSkin();
-
+  const dispatch = useDispatch();
   const history = useHistory();
 
   const defaultValues = {
@@ -50,29 +52,20 @@ const LoginCover = () => {
     axios
       .post(loginUser, data)
       .then((response) => {
-        let dataR = {
-          user: response.data.user,
-          accessToken: response.data.accessToken,
-        };
+        // let dataR = {
+        //   user: response.data.user,
+        //   accessToken: response.data.accessToken,
+        // };
+
+        let dataR = response.data.user;
         console.log(dataR);
         localStorage.setItem("userJson", JSON.stringify(dataR));
+        dispatch(userLogin(dataR));
         history.push("/home");
       })
       .catch((err) => {
         alert("Please enter correct email or password !");
       });
-    // const email = data && data.email;
-    // if (email == "admin@gmail.com") {
-    //   data.role = "Admin";
-    //   localStorage.setItem("userJson", JSON.stringify(data));
-    // } else if (email == "superuser@gmail.com") {
-    //   data.role = "SuperUser";
-    //   localStorage.setItem("userJson", JSON.stringify(data));
-    // } else if (email == "user@gmail.com") {
-    //   data.role = "User";
-    //   localStorage.setItem("userJson", JSON.stringify(data));
-    // }
-    // history.push("/home");
   };
 
   return (
@@ -121,14 +114,14 @@ const LoginCover = () => {
                 />
               </div>
               <div className="mb-1">
-                <div className="d-flex justify-content-between">
+                {/* <div className="d-flex justify-content-between">
                   <Label className="form-label" for="login-password">
                     Password
                   </Label>
                   <Link to="/pages/forgot-password-cover">
                     <small>Forgot Password?</small>
                   </Link>
-                </div>
+                </div> */}
 
                 <Controller
                   control={control}
@@ -144,12 +137,12 @@ const LoginCover = () => {
                   )}
                 />
               </div>
-              <div className="form-check mb-1">
+              {/* <div className="form-check mb-1">
                 <Input type="checkbox" id="remember-me" />
                 <Label className="form-check-label" for="remember-me">
                   Remember Me
                 </Label>
-              </div>
+              </div> */}
               <Button color="primary">Sign in</Button>
             </Form>
             <p className="text-center mt-2">

@@ -25,9 +25,16 @@ import { v4 as uuidv4 } from "uuid";
 import { Zoom, toast } from "react-toastify";
 import { SuccessToastChart } from "../../Toast";
 import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { UserAction } from "../../Actions/UserAction";
+import { userLogin } from "../../Reducers/UserReducer";
 const FileUploaderMultiple = () => {
   // ** State
   const [files, setFiles] = useState([]);
+
+  const dispatch = useDispatch();
+  const { userData } = useSelector((state) => state.UserReducer);
+
   const history = useHistory();
   const { getRootProps, getInputProps } = useDropzone({
     onDrop: (acceptedFiles) => {
@@ -96,9 +103,9 @@ const FileUploaderMultiple = () => {
   };
 
   const handleUploadFiles = async () => {
-    const user = await axios.get("http://localhost:8000/users/1");
-
+    const user = await axios.get("http://localhost:8000/users/" + userData.id);
     let csvFiles = user && user.data.csvFiles;
+
     const filesPromiseContainer =
       files &&
       files.length &&
@@ -109,11 +116,17 @@ const FileUploaderMultiple = () => {
               download: true,
               header: true,
               complete: (results) => {
-                csvFiles.push({
-                  name: singleFile.name,
-                  fileData: JSON.parse(JSON.stringify(results.data)),
-                  uuid: uuidv4(),
-                });
+                try {
+                  csvFiles.push({
+                    name: singleFile.name,
+                    fileData: JSON.parse(JSON.stringify(results.data)),
+                    uuid: uuidv4(),
+                  });
+                } catch (error) {
+                  console.log("====================================");
+                  console.log(error);
+                  console.log("====================================");
+                }
                 resolve(results);
               },
               error: (error) => {
@@ -427,9 +440,10 @@ const FileUploaderMultiple = () => {
     };
 
     axios
-      .patch(updateUserInfo + "/1", { csvFiles })
+      .patch(updateUserInfo + "/" + userData.id, { csvFiles })
       .then((response) => {
         console.log("response", response);
+        dispatch(userLogin(response && response.data));
         toast.success(
           <SuccessToastChart message={"Files Uploaded Successfully !"} />,
           {

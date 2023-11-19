@@ -1,9 +1,23 @@
-// ** Redux Imports
+// // ** Redux Imports
+// import { createSlice } from "@reduxjs/toolkit";
+
+// // ** UseJWT import to get config
+// import useJwt from "@src/auth/jwt/useJwt";
+
+// const config = useJwt.jwtConfig;
+
+///// ** Redux Imports
 import { createSlice } from "@reduxjs/toolkit";
 
 // ** UseJWT import to get config
 import useJwt from "@src/auth/jwt/useJwt";
 
+import {
+  USER_REQUEST,
+  USER_SUCCESS,
+  USER_FAIL,
+  CLEAR_ERRORS,
+} from "../Constants/UserConstants.js";
 const config = useJwt.jwtConfig;
 
 const initialUser = () => {
@@ -13,11 +27,16 @@ const initialUser = () => {
 };
 
 export const authSlice = createSlice({
-  name: "authentication",
+  name: "userAuthentication",
   initialState: {
     userData: initialUser(),
   },
   reducers: {
+    userLogin: (state, action) => {
+      state.userData = action.payload;
+      localStorage.setItem("userJson", JSON.stringify(action.payload));
+    },
+
     handleLogin: (state, action) => {
       state.userData = action.payload;
       state[config.storageTokenKeyName] =
@@ -36,16 +55,16 @@ export const authSlice = createSlice({
     },
     handleLogout: (state) => {
       state.userData = {};
-      state[config.storageTokenKeyName] = null;
-      state[config.storageRefreshTokenKeyName] = null;
+      // state[config.storageTokenKeyName] = null;
+      // state[config.storageRefreshTokenKeyName] = null;
       // ** Remove user, accessToken & refreshToken from localStorage
       localStorage.removeItem("userJson");
-      localStorage.removeItem(config.storageTokenKeyName);
-      localStorage.removeItem(config.storageRefreshTokenKeyName);
+      // localStorage.removeItem(config.storageTokenKeyName);
+      // localStorage.removeItem(config.storageRefreshTokenKeyName);
     },
   },
 });
 
-export const { handleLogin, handleLogout } = authSlice.actions;
+export const { userLogin, handleLogin, handleLogout } = authSlice.actions;
 
 export default authSlice.reducer;

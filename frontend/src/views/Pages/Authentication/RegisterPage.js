@@ -100,6 +100,8 @@ const RegisterCover = () => {
     axios.post(registerUser, data).then((response) => {
       console.log(response);
     });
+
+    history.push("/login");
     console.log("submit data --> ", data);
   };
   return (
