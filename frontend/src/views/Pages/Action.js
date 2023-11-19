@@ -40,11 +40,6 @@ const ActionPage = () => {
   const history = useHistory();
   const submitClicked = () => {
     history.push("/griFrameworkPage");
-    // return toast.success(<SuccessToast framework={state.selectedFrameWork} />, {
-    //   icon: false,
-    //   hideProgressBar: true,
-    //   transition: Zoom,
-    // });
   };
 
   const handleRadioButton = (e) => {

@@ -41,7 +41,7 @@ const SustainabilityReportPage = () => {
                   variance: "-3.3 %",
                 }}
                 buttonText={"View Emission"}
-                title={"Emissions (t of CO2e"}
+                title={"Emissions (t of CO2e)"}
                 buttonLink={"/viewEmissionReportPage"}
                 icon={<Truck size={25} />}
               />
@@ -50,7 +50,7 @@ const SustainabilityReportPage = () => {
               {" "}
               <SustainabilityReportCard
                 buttonText={"View Energy"}
-                buttonLink={"/viewEmissionReportPage"}
+                buttonLink={"/viewEnergyReportPage"}
                 data={{
                   current: "1.28M",
                   previous: "1.31M",
@@ -64,7 +64,7 @@ const SustainabilityReportPage = () => {
               {" "}
               <SustainabilityReportCard
                 buttonText={"View Waste"}
-                buttonLink={"/viewEmissionReportPage"}
+                buttonLink={"/viewWasteReportPage"}
                 title={"Waste (t)"}
                 data={{
                   current: "2.55K",
@@ -78,7 +78,7 @@ const SustainabilityReportPage = () => {
               {" "}
               <SustainabilityReportCard
                 buttonText={"View Water"}
-                buttonLink={"/viewEmissionReportPage"}
+                buttonLink={"/viewWaterReportPage"}
                 title={"Water (L)"}
                 data={{
                   current: "633.34",

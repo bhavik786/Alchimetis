@@ -1,22 +1,19 @@
-import React from "react";
-import { Truck } from "react-feather";
-import { useHistory } from "react-router-dom";
+/* eslint-disable */
 
-import FullPageTemplate from "../../Components/SustainabilityPage/FullPageTemplate";
+import FullPageTemplate from "../../../Components/SustainabilityPage/FullPageTemplate";
+import { Thermometer, Trash, Zap } from "react-feather";
 
-const EmissionReportPage = () => {
-  const history = useHistory();
-
+const ElectricityPage = () => {
   let passData = {
-    mainTitle: "Emissions (t of CO2e )",
-    icon: <Truck size={25} />,
+    mainTitle: "Districted Heating and Cooling (GJ)",
+    icon: <Thermometer size={25} />,
     cardData: {
-      card1: { title: "SCOPE 1" },
-      card2: { title: "SCOPE 2" },
-      card3: { title: "SCOPE 3" },
+      card1: { title: "CONSUMPTION" },
+      card2: { title: "EMISSIONS (T OF CO2E)" },
+      card3: { title: "COST (CAD)" },
     },
     donutChartData: {
-      seriesForDonut: [44, 55],
+      seriesForDonut: [60, 40],
       optionsForDonut: {
         chart: {
           type: "donut",
@@ -63,14 +60,7 @@ const EmissionReportPage = () => {
           width: 380,
           type: "pie",
         },
-        labels: [
-          "Electricity",
-          "Natural Gas",
-          "Refrigerant - HFC",
-          "Refrigerant - R22",
-          "Steam",
-          "Diesel Transport",
-        ],
+        labels: ["Districted Heating "],
         responsive: [
           {
             breakpoint: 480,
@@ -85,29 +75,19 @@ const EmissionReportPage = () => {
           },
         ],
       },
-      seriesForPie: [44, 55, 13, 43, 22, 20],
+      seriesForPie: [44],
     },
     barChartData: {
       title: "Locations",
       seriesForBar: [
         // Rename 'x' to 'data'
         {
-          name: "Scope 1",
-          data: [44, 55, 41, 55, 12, 47],
-        },
-        {
-          name: "Scope 2",
-          data: [53, 32, 33, 41, 86, 10],
-        },
-        {
-          name: "Scope 3",
-          data: [12, 17, 11, 18, 52, 85],
+          name: "Districted Heating and Cooling (GJ)",
+          data: [44],
         },
       ],
       optionsForBar: {
         chart: {
-          // type: "bar",
-          // height: 350,
           stacked: true,
         },
         plotOptions: {
@@ -131,14 +111,7 @@ const EmissionReportPage = () => {
         },
 
         xaxis: {
-          categories: [
-            "Banff",
-            "Toronto",
-            "Redmond",
-            "Wayne",
-            "Royal Oak",
-            "Taylor",
-          ], // Adjust the length based on your data
+          categories: ["One Pann Pizza"],
           labels: {
             enabled: false,
             formatter: function (val) {
@@ -172,14 +145,14 @@ const EmissionReportPage = () => {
       title: "Month by Month",
       seriesForBarWithLine: [
         {
-          name: "Emissions",
+          name: "Energy ",
           type: "column",
-          data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160],
+          data: [440, 505, 414, 671, 227, 413, 201, 352, 0, 0, 5, 10],
         },
         {
-          name: "C02",
+          name: "Energy PY ",
           type: "line",
-          data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16],
+          data: [23, 42, 35, 27, 43, 22, 17, 31, 0, 2, 1, 5],
         },
       ],
       optionsForBarWithLine: {
@@ -232,7 +205,11 @@ const EmissionReportPage = () => {
       },
     },
   };
-  return <FullPageTemplate passData={passData} />;
+  return (
+    <div>
+      <FullPageTemplate passData={passData} />
+    </div>
+  );
 };
 
-export default EmissionReportPage;
+export default ElectricityPage;

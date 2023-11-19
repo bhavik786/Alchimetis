@@ -46,6 +46,57 @@ const Routes = [
     component: lazy(() => import("../../views/Pages/EmissionReportPage")),
   },
   {
+    path: "/viewEnergyReportPage",
+    exact: true,
+    component: lazy(() =>
+      import("../../views/Pages/EnergyReportPage/EnergyReportPage.js")
+    ),
+  },
+  {
+    path: "/viewWaterReportPage",
+    component: lazy(() => import("../../views/Pages/WaterReportPage.js")),
+  },
+  {
+    path: "/viewWasteReportPage",
+    component: lazy(() => import("../../views/Pages/WasteReportPage.js")),
+  },
+
+  {
+    path: "/viewEnergyReportPage/viewElectricity",
+    exact: true,
+    component: lazy(() =>
+      import("../../views/Pages/EnergyReportPage/ElectricityPage.js")
+    ),
+  },
+  {
+    path: "/viewEnergyReportPage/viewNaturalGas",
+    exact: true,
+    component: lazy(() =>
+      import("../../views/Pages/EnergyReportPage/NaturalGasPage.js")
+    ),
+  },
+  {
+    path: "/viewEnergyReportPage/viewStationaryFuel",
+    exact: true,
+    component: lazy(() =>
+      import("../../views/Pages/EnergyReportPage/StationaryFuelPage.js")
+    ),
+  },
+  {
+    path: "/viewEnergyReportPage/viewHeatingAndCooling",
+    exact: true,
+    component: lazy(() =>
+      import("../../views/Pages/EnergyReportPage/HeatingAndCoolingPage.js")
+    ),
+  },
+  {
+    path: "/viewEnergyReportPage/viewTransportFuel",
+    exact: true,
+    component: lazy(() =>
+      import("../../views/Pages/EnergyReportPage/TransportFuelPage.js")
+    ),
+  },
+  {
     path: "/second-page",
     component: lazy(() => import("../../views/SecondPage")),
   },
