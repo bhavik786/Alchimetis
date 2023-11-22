@@ -96,6 +96,14 @@ const Routes = [
       import("../../views/Pages/EnergyReportPage/TransportFuelPage.js")
     ),
   },
+
+  {
+    path: "/griStandardSelectionPage",
+    exact: true,
+    component: lazy(() =>
+      import("../../views/Pages/GriStandardSelectionPage.js")
+    ),
+  },
   {
     path: "/second-page",
     component: lazy(() => import("../../views/SecondPage")),

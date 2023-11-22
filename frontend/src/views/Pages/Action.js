@@ -39,7 +39,8 @@ const ActionPage = () => {
   });
   const history = useHistory();
   const submitClicked = () => {
-    history.push("/griFrameworkPage");
+    // history.push("/griFrameworkPage");
+    history.push("/griStandardSelectionPage");
   };
 
   const handleRadioButton = (e) => {

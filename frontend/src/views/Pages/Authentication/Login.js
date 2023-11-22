@@ -21,6 +21,8 @@ import axios from "axios";
 import { loginUser } from "../../../Utils/GlobalApiRoutes";
 import { useDispatch } from "react-redux";
 import { userLogin } from "../../../Reducers/UserReducer";
+import { SuccessToastChart } from "../../../Toast";
+import { toast, Zoom } from "react-toastify";
 
 const LoginCover = () => {
   const { skin } = useSkin();
@@ -52,15 +54,18 @@ const LoginCover = () => {
     axios
       .post(loginUser, data)
       .then((response) => {
-        // let dataR = {
-        //   user: response.data.user,
-        //   accessToken: response.data.accessToken,
-        // };
-
         let dataR = response.data.user;
         console.log(dataR);
         localStorage.setItem("userJson", JSON.stringify(dataR));
         dispatch(userLogin(dataR));
+        toast.success(
+          <SuccessToastChart message={"Logged In Successfully!"} />,
+          {
+            icon: false,
+            hideProgressBar: true,
+            transition: Zoom,
+          }
+        );
         history.push("/home");
       })
       .catch((err) => {

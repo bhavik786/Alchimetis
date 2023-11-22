@@ -6,7 +6,7 @@ import { useSkin } from "@hooks/useSkin";
 
 // ** Icons Imports
 import { Facebook, Twitter, Mail, GitHub } from "react-feather";
-
+import { toast, Zoom } from "react-toastify";
 // ** Custom Components
 import InputPasswordToggle from "@components/input-password-toggle";
 import { useForm, Controller } from "react-hook-form";
@@ -29,6 +29,7 @@ import "@styles/react/pages/page-authentication.scss";
 
 import axios from "axios";
 import { registerUser } from "../../../Utils/GlobalApiRoutes";
+import { SuccessToastChart } from "../../../Toast";
 
 const RegisterCover = () => {
   // ** Hooks
@@ -72,11 +73,22 @@ const RegisterCover = () => {
   ];
 
   const griFrameworkOptions = [
-    { label: "GRI 1", value: "gri1" },
-    { label: "GRI 2", value: "gri2" },
+    // { label: "GRI 1", value: "gri1" },
+    // { label: "GRI 2", value: "gri2" },
+    // {
+    //   label: "GRI 3",
+    //   value: "gri3",
+    // },
+
+    { label: "GRI", value: "GRI" },
+    { label: "TCFD", value: "TCFD" },
     {
-      label: "GRI 3",
-      value: "gri3",
+      label: "UN",
+      value: "UN",
+    },
+    {
+      label: "SASB",
+      value: "SASB",
     },
   ];
   const {
@@ -100,6 +112,14 @@ const RegisterCover = () => {
     axios.post(registerUser, data).then((response) => {
       console.log(response);
     });
+    toast.success(
+      <SuccessToastChart message={"Account Created Successfully!"} />,
+      {
+        icon: false,
+        hideProgressBar: true,
+        transition: Zoom,
+      }
+    );
 
     history.push("/login");
     console.log("submit data --> ", data);
@@ -239,14 +259,14 @@ const RegisterCover = () => {
               </div>{" "}
               <div className="mb-1">
                 <Label className="form-label" for="griFrameworkSelection">
-                  GRI Framework Selection
+                  Framework Selection
                 </Label>
                 <Controller
                   control={control}
                   id="griFrameworkSelection"
                   name="griFrameworkSelection"
                   render={({ field }) => (
-                    <Select isMulti options={griFrameworkOptions} {...field} />
+                    <Select options={griFrameworkOptions} {...field} />
                   )}
                 />
               </div>
