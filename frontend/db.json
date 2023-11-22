@@ -7464,6 +7464,186 @@
             }
           ],
           "uuid": "d36823e7-8b42-4c33-8ca7-b29d70a31165"
+        },
+        {
+          "name": "Summary.csv",
+          "fileData": [
+            {
+              "Month": "9/1/2022",
+              "Actual": "103739.4791",
+              "Accrued": "2532.9179",
+              "Estimated": "1.8917",
+              "Cost per GJ": "40.5045"
+            },
+            {
+              "Month": "10/1/2022",
+              "Actual": "98790.4654",
+              "Accrued": "2620.6742",
+              "Estimated": "34.333",
+              "Cost per GJ": "42.3554"
+            },
+            {
+              "Month": "11/1/2022",
+              "Actual": "99186.3426",
+              "Accrued": "2536.1363",
+              "Estimated": "3.3175",
+              "Cost per GJ": "39.8921"
+            },
+            {
+              "Month": "12/1/2022",
+              "Actual": "103738.4587",
+              "Accrued": "2620.6742",
+              "Estimated": "32.365",
+              "Cost per GJ": "38.6008"
+            },
+            {
+              "Month": "1/1/2023",
+              "Actual": "101398.3037",
+              "Accrued": "2620.9057",
+              "Estimated": "28.9317",
+              "Cost per GJ": "42.1122"
+            },
+            {
+              "Month": "2/1/2023",
+              "Actual": "101801.8958",
+              "Accrued": "267.0237",
+              "Estimated": "3.7834",
+              "Cost per GJ": "40.7852"
+            },
+            {
+              "Month": "3/1/2023",
+              "Actual": "102669.1713",
+              "Accrued": "298.6171",
+              "Estimated": "25.5379",
+              "Cost per GJ": "41.9215"
+            },
+            {
+              "Month": "4/1/2023",
+              "Actual": "144401.5056",
+              "Accrued": "286.5941",
+              "Estimated": "8.1626",
+              "Cost per GJ": "39.0649"
+            },
+            {
+              "Month": "5/1/2023",
+              "Actual": "120108.5327",
+              "Accrued": "295.6334",
+              "Estimated": "54.0603",
+              "Cost per GJ": "42.4505"
+            },
+            {
+              "Month": "6/1/2023",
+              "Actual": "98244.1734",
+              "Accrued": "286.3283",
+              "Estimated": "7.403",
+              "Cost per GJ": "45.1574"
+            },
+            {
+              "Month": "7/1/2023",
+              "Actual": "106443.0478",
+              "Accrued": "1273.546",
+              "Estimated": "24.592",
+              "Cost per GJ": "39.8694"
+            },
+            {
+              "Month": "8/1/2023",
+              "Actual": "106231.4697",
+              "Accrued": "1274.006",
+              "Estimated": "4.7292",
+              "Cost per GJ": "41.7387"
+            }
+          ],
+          "uuid": "9e2d4e7d-a904-4b81-8802-3428ec029735"
+        },
+        {
+          "name": "Energy.csv",
+          "fileData": [
+            {
+              "Month": "9/1/2022",
+              "Actual": "103739.4791",
+              "Accrued": "2532.9179",
+              "Estimated": "1.8917",
+              "Cost per GJ": "40.5045"
+            },
+            {
+              "Month": "10/1/2022",
+              "Actual": "98790.4654",
+              "Accrued": "2620.6742",
+              "Estimated": "34.333",
+              "Cost per GJ": "42.3554"
+            },
+            {
+              "Month": "11/1/2022",
+              "Actual": "99186.3426",
+              "Accrued": "2536.1363",
+              "Estimated": "3.3175",
+              "Cost per GJ": "39.8921"
+            },
+            {
+              "Month": "12/1/2022",
+              "Actual": "103738.4587",
+              "Accrued": "2620.6742",
+              "Estimated": "32.365",
+              "Cost per GJ": "38.6008"
+            },
+            {
+              "Month": "1/1/2023",
+              "Actual": "101398.3037",
+              "Accrued": "2620.9057",
+              "Estimated": "28.9317",
+              "Cost per GJ": "42.1122"
+            },
+            {
+              "Month": "2/1/2023",
+              "Actual": "101801.8958",
+              "Accrued": "267.0237",
+              "Estimated": "3.7834",
+              "Cost per GJ": "40.7852"
+            },
+            {
+              "Month": "3/1/2023",
+              "Actual": "102669.1713",
+              "Accrued": "298.6171",
+              "Estimated": "25.5379",
+              "Cost per GJ": "41.9215"
+            },
+            {
+              "Month": "4/1/2023",
+              "Actual": "144401.5056",
+              "Accrued": "286.5941",
+              "Estimated": "8.1626",
+              "Cost per GJ": "39.0649"
+            },
+            {
+              "Month": "5/1/2023",
+              "Actual": "120108.5327",
+              "Accrued": "295.6334",
+              "Estimated": "54.0603",
+              "Cost per GJ": "42.4505"
+            },
+            {
+              "Month": "6/1/2023",
+              "Actual": "98244.1734",
+              "Accrued": "286.3283",
+              "Estimated": "7.403",
+              "Cost per GJ": "45.1574"
+            },
+            {
+              "Month": "7/1/2023",
+              "Actual": "106443.0478",
+              "Accrued": "1273.546",
+              "Estimated": "24.592",
+              "Cost per GJ": "39.8694"
+            },
+            {
+              "Month": "8/1/2023",
+              "Actual": "106231.4697",
+              "Accrued": "1274.006",
+              "Estimated": "4.7292",
+              "Cost per GJ": "41.7387"
+            }
+          ],
+          "uuid": "929a3129-c355-461a-915b-93c588b6272c"
         }
       ],
       "id": 1

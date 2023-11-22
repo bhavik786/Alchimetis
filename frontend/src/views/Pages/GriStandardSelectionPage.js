@@ -85,9 +85,9 @@ const GriStandardSelectionPage = () => {
                     <Row>
                       <Col>
                         <div className="demo-inline-spacing">
-                          <CheckBoxComp checked={true} LabelText={"GRI 1"} />
-                          <CheckBoxComp checked={true} LabelText={"GRI 2"} />
-                          <CheckBoxComp checked={true} LabelText={"GRI 3"} />
+                          <CheckBoxComp LabelText={"GRI 1"} />
+                          <CheckBoxComp LabelText={"GRI 2"} />
+                          <CheckBoxComp LabelText={"GRI 3"} />
                         </div>
                       </Col>
                     </Row>
@@ -98,15 +98,15 @@ const GriStandardSelectionPage = () => {
                     <b>Sector Standards</b>
                   </AccordionHeader>
                   <AccordionBody accordionId="2">
-                    <CheckBoxComp checked={false} LabelText={"GRI 11"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 12"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 13"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 14"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 15"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 16"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 17"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 18"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 19"} />
+                    <CheckBoxComp LabelText={"GRI 11"} />
+                    <CheckBoxComp LabelText={"GRI 12"} />
+                    <CheckBoxComp LabelText={"GRI 13"} />
+                    <CheckBoxComp LabelText={"GRI 14"} />
+                    <CheckBoxComp LabelText={"GRI 15"} />
+                    <CheckBoxComp LabelText={"GRI 16"} />
+                    <CheckBoxComp LabelText={"GRI 17"} />
+                    <CheckBoxComp LabelText={"GRI 18"} />
+                    <CheckBoxComp LabelText={"GRI 19"} />
                   </AccordionBody>
                 </AccordionItem>
                 <AccordionItem>
@@ -114,14 +114,14 @@ const GriStandardSelectionPage = () => {
                     <b>Topic Standards</b>
                   </AccordionHeader>
                   <AccordionBody accordionId="3">
-                    <CheckBoxComp checked={false} LabelText={"GRI 201"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 304"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 305"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 415"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 205"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 416"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 205"} />
-                    <CheckBoxComp checked={false} LabelText={"GRI 208"} />
+                    <CheckBoxComp LabelText={"GRI 201"} />
+                    <CheckBoxComp LabelText={"GRI 304"} />
+                    <CheckBoxComp LabelText={"GRI 305"} />
+                    <CheckBoxComp LabelText={"GRI 415"} />
+                    <CheckBoxComp LabelText={"GRI 205"} />
+                    <CheckBoxComp LabelText={"GRI 416"} />
+                    <CheckBoxComp LabelText={"GRI 205"} />
+                    <CheckBoxComp LabelText={"GRI 208"} />
                   </AccordionBody>
                 </AccordionItem>
               </Accordion>

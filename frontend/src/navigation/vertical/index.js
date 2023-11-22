@@ -51,15 +51,15 @@ routes = [
       },
     ],
   },
-  {
-    id: "reports",
-    title: "Reports",
-    icon: <Book size={20} />,
-    navLink: "/reports",
-  },
+  // {
+  //   id: "reports",
+  //   title: "Reports",
+  //   icon: <Book size={20} />,
+  //   navLink: "/reports",
+  // },
   {
     id: "advanceReports",
-    title: "Advance Reports",
+    title: "Reports",
     icon: <BarChart2 size={20} />,
     navLink: "/advanceReports",
   },
