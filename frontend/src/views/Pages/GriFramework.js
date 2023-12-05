@@ -9,16 +9,32 @@ import {
   Row,
   Col,
   Label,
+  Button,
 } from "reactstrap";
 import ReportTypesPage from "./ReportTypesList";
 import ReportsCard from "../../Components/ActionPage/ReportsCard";
 import StatsHorizontal from "../../@core/components/widgets/stats/StatsHorizontal";
 import { Cpu } from "react-feather";
 import { useHistory } from "react-router-dom";
+
+import { useReactToPrint } from "react-to-print";
+
+import EmissionReportPage from "./EmissionReportPage";
+import { useRef } from "react";
+import { useComponentPDF } from "component-pdf";
 const GriFrameWorkPage = () => {
   const history = useHistory();
   const handleReportClick = (url) => {
     history.push(`/${url}`);
+  };
+  const { loading, download } = useComponentPDF("pdf");
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+  const funcDownload = () => {
+    setTimeout(3000);
+    download();
   };
   return (
     <div>
@@ -53,6 +69,17 @@ const GriFrameWorkPage = () => {
           <ReportsCard name={"CSR Reports"} />
         </Col>
       </Row>{" "}
+      {/* <Button color="primary" onClick={funcDownload}>
+        Download Report
+      </Button>
+      <div id="pdf">
+        <Row style={{ padding: "25px" }}>
+          <Label>
+            <b>View Emission Report</b>
+          </Label>
+          <EmissionReportPage forReport={true} />
+        </Row>
+      </div> */}
     </div>
   );
 };

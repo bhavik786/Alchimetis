@@ -103,7 +103,7 @@ const FileUploaderMultiple = () => {
   };
 
   const handleUploadFiles = async () => {
-    const user = await axios.get("http://localhost:8000/users/" + userData.id);
+    const user = await axios.get(updateUserInfo + "/" + userData.id);
     let csvFiles = user && user.data.csvFiles;
 
     const filesPromiseContainer =

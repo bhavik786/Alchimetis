@@ -14,6 +14,7 @@ import { Zoom, toast } from "react-toastify";
 import { SuccessToastChart } from "../../Toast";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogin } from "../../Reducers/UserReducer";
+import { updateUserInfo } from "../../Utils/GlobalApiRoutes";
 
 const DataTablesBasic = () => {
   const [fileList, setFileList] = useState([]);
@@ -36,7 +37,7 @@ const DataTablesBasic = () => {
     );
     setFileList((prevData) => {
       axios
-        .patch("http://localhost:8000/users/" + userData.id, {
+        .patch(updateUserInfo + "/" + userData.id, {
           csvFiles: prevData,
         })
         .then((response) => {

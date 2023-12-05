@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 
 import FullPageTemplate from "../../Components/SustainabilityPage/FullPageTemplate";
 
-const EmissionReportPage = () => {
+const EmissionReportPage = ({ forReport }) => {
   const history = useHistory();
 
   let passData = {
@@ -232,7 +232,7 @@ const EmissionReportPage = () => {
       },
     },
   };
-  return <FullPageTemplate passData={passData} />;
+  return <FullPageTemplate passData={passData} forReport={forReport} />;
 };
 
 export default EmissionReportPage;
